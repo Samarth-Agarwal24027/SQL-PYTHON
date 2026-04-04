@@ -16,3 +16,10 @@ git config --global user.email "24027@burside.school.nz"
 git push -u origin main
 
 git status
+
+
+############# after making changes ###############
+git status
+git add .
+git commit -m "Initial commit"
+git push -u origin main
