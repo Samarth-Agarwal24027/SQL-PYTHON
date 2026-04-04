@@ -1,0 +1,15 @@
+# github-config
+
+cd sql-python
+git init
+git branch -M main
+git remote add origin git@github.com:Samarth-Agarwal24027/SQL-PYTHON.git
+git add .
+
+git commit -m "Initial commit"
+git config --global user.name "Samarth-Agarwal24027"
+git config --global user.email "24027@burside.school.nz"
+
+
+git push -u origin main
+git status
