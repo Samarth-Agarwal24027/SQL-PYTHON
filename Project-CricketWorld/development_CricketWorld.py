@@ -21,7 +21,9 @@ import sqlite3
 # -----------------------------
 # DATABASE CONNECTION
 # -----------------------------
-DB_NAME = "CricketWorld.db"
+DB_NAME = r"C:\Users\Samarth\Documents\sql-python\Project-CricketWorld\CricketWorld"
+print("DB path:", DB_NAME)
+
 
 def connect_db():
     conn = sqlite3.connect(DB_NAME)
