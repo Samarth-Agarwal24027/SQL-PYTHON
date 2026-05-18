@@ -21,7 +21,8 @@ import sqlite3
 # -----------------------------
 # DATABASE CONNECTION
 # -----------------------------
-DB_NAME = r"C:\Users\Samarth\Documents\sql-python\Project-CricketWorld\CricketWorld"
+#DB_NAME = r"C:\Users\Samarth\Documents\sql-python\Project-CricketWorld\CricketWorld"
+DB_NAME = "CricketWorld"
 print("DB path:", DB_NAME)
 
 
@@ -81,13 +82,13 @@ def search_by_team():
     conn = connect_db()
     cursor = conn.cursor()
 
-    team_name = input("Enter team name: ")
+    team_name = input("Enter team name: ").strip().lower()
 
     cursor.execute("""
         SELECT player.player_name, player.role, player.runs
         FROM player
         JOIN team ON player.team_id = team.team_id
-        WHERE team.team_name = ?
+        WHERE LOWER(team.team_name) = ?
     """, (team_name,))
 
     results = cursor.fetchall()
